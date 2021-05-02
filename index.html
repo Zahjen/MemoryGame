@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="style.css">
     <title>Memory Game</title>
 </head>
@@ -13,7 +14,9 @@
 
 <div class="title">Memory Game</div>
 <div class="sentence">Select the number of cards you want !</div>
-
+<div class="trialContainer">
+    Trials : <span class="trial"></span>
+</div>
 <div class="cellContainer"></div>
 
 <select id="inputSize">
@@ -27,6 +30,14 @@
 </select>
 <button class="selectSize">Generate the grid</button>
 <button class="newGrid">New grid</button>
+
+<div class="blur">
+    <div class="win">
+        <div class="close material-icons">close</div>
+        <p> Well done!<br>You did it!</p>
+        <button class="newGame">Play again</button>
+    </div>
+</div>
 
 <script type="application/javascript" src="script.js"></script>
 </body>
