@@ -29,6 +29,11 @@ body {
     padding: 0 15px;
 }
 
+.trialContainer {
+    display: none;
+    margin-bottom: 15px;
+}
+
 select {
     margin-bottom: 20px;
     background-color: transparent;
@@ -71,7 +76,17 @@ option {
 img {
     pointer-events: none;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.material-icon {
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.close {
+    width: 100%;
+    text-align: right;
 }
 
 .flip {
@@ -86,13 +101,49 @@ img {
 button {
     background-color: transparent;
     border: white solid 2px;
-    border-radius: 10px;
+    border-radius: 25px;
     outline: none;
     padding: 10px 20px;
 }
 
+.blur {
+    background: linear-gradient(to bottom, #1e092e, #8d0101);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    display: none;
+}
+
+.win {
+    background-color: #500000;
+    padding: 30px 30px 50px 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70vw;
+    min-width: 50vw;
+    height: 50vh;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 10px 25px -3px #000000; 
+    box-shadow: 0px 10px 25px -3px #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.win p {
+    font-size: 30px;
+    text-align: center;
+}
 
 @media screen and (max-width: 420px) {
+    .win > * {
+        font-size: 16px;
+    }
+
     .cell {
         width: 60px;
         height: 60px;
